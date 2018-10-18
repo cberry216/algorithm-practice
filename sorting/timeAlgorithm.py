@@ -1,6 +1,7 @@
 from countingSort import countingSort
 from quickSort import quickSort
 from insertionSort import insertionSort
+from mergeSort import mergeSort
 import time
 
 
@@ -17,6 +18,11 @@ def timeAlgorithm(array, algorithm):
         start = time.time_ns()
         insertionSort(array)
         end = time.time_ns()
+    elif algorithm == "merge":
+        start = time.time_ns()
+        mergeSort(array)
+        end = time.time_ns()
+
     else:
         return 1
     return end - start
