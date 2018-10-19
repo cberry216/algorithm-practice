@@ -61,4 +61,3 @@ def getAlmostSortedArray(n, a, b):
         )
     )
     return array
-

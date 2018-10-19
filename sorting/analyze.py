@@ -7,7 +7,7 @@ from onlyOne import onlyOne
 
 if len(sys.argv) > 6:
     print(
-        "usage: analyze [counting | quick | insertion | merge] [-n min max] [-sraz] <number of tests>"
+        "usage: analyze [counting | quick | insertion | merge | heap] [-n min max] [-sraz] <number of tests>"
     )
 
 # Extract algorithm
@@ -61,6 +61,8 @@ elif algorithm == "insertion":
     output = open("/Users/christopherberry/Desktop/insertionSort.csv", "w")
 elif algorithm == "merge":
     output = open("/Users/christopherberry/Desktop/mergeSort.csv", "w")
+elif algorithm == "heap":
+    output = open("/Users/christopherberry/Desktop/heapSort.csv", "w")
 output.write("size,runtime\n")
 
 start = time.time_ns()

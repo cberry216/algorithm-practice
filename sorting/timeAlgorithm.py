@@ -2,6 +2,7 @@ from countingSort import countingSort
 from quickSort import quickSort
 from insertionSort import insertionSort
 from mergeSort import mergeSort
+from heapSort import heapSort
 import time
 
 
@@ -21,6 +22,10 @@ def timeAlgorithm(array, algorithm):
     elif algorithm == "merge":
         start = time.time_ns()
         mergeSort(array)
+        end = time.time_ns()
+    elif algorithm == "heap":
+        start = time.time_ns()
+        heapSort(array)
         end = time.time_ns()
 
     else:
