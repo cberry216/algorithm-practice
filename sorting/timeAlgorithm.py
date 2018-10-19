@@ -3,6 +3,7 @@ from quickSort import quickSort
 from insertionSort import insertionSort
 from mergeSort import mergeSort
 from heapSort import heapSort
+from introSort import introSort
 import time
 
 
@@ -25,7 +26,11 @@ def timeAlgorithm(array, algorithm):
         end = time.time_ns()
     elif algorithm == "heap":
         start = time.time_ns()
-        heapSort(array)
+        heapSort(array, 0, len(array))
+        end = time.time_ns()
+    elif algorithm == "intro":
+        start = time.time_ns()
+        introSort(array)
         end = time.time_ns()
 
     else:

@@ -1,10 +1,9 @@
 from heapq import *
 
 
-def heapSort(array):
-    heapify(array)
-    sortArray = []
-    for i in range(len(array)):
-        sortArray.append(heappop(array))
-    return sortArray
+def heapSort(array, start, end):
+    subArray = array[start:end]
+    heapify(subArray)
+    for i in range(start, end):
+        array[i] = heappop(subArray)
 
