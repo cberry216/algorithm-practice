@@ -1,7 +1,18 @@
 def countingSort(array):
+    """Sorts an array of numbers according to the counting sort algorithm
+    
+    Arguments:
+        array {[integer]} -- array of integers to be sorted
+
+    Returns:
+        [integer] -- array containing sorted integers
+    """
+
     maxVal = max(array)
 
+    # Initializing the distribution array
     distArray = [0] * (maxVal + 1)
+    # Initializing return array
     buffer = [0] * (len(array) + 1)
 
     # Create distribution array
